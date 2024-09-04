@@ -159,7 +159,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://ideasassess.vercel.app",
+    "https://ideas-assess.onrender.com",
 ]
 
 #REST framework settings to use Simple JWT
