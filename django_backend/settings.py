@@ -159,10 +159,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Cross Origin Settings
-CORS_ALLOWED_ORIGINS = [
-    "https://ideas-assess.onrender.com",  # React app URL
-]
-
 CORS_ALLOW_ALL_ORIGINS = True
 
 
@@ -172,6 +168,9 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+
+# Static files settings
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1440),
