@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'ygfsdtygfuewgytegwywebyvvy')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = ["ideasassess.onrender.com"]
 
 
 # Application definition
