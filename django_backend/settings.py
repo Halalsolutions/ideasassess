@@ -160,7 +160,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Cross Origin Settings
 CORS_ALLOWED_ORIGINS = [
-    "https://ideas-assess.onrender.com/",  # React app URL
+    "https://ideas-assess.onrender.com",  # React app URL
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
