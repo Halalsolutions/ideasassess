@@ -158,9 +158,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Cross Origin Settings
-CORS_ALLOW_ALL_ORIGINS = True
-
+CORS_ALLOWED_ORIGINS = [
+    "https://ideasassess.vercel.app",
+]
 
 #REST framework settings to use Simple JWT
 REST_FRAMEWORK = {
