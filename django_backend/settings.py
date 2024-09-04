@@ -96,14 +96,14 @@ WSGI_APPLICATION = 'django_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DATABASE_ENGINE'),
-        'NAME': os.getenv('POSTGRES_DATABASE'),  # Name of your database
-        'USER': os.getenv('POSTGRES_USER'),  # Username
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),  # Password
-        'HOST': os.getenv('POSTGRES_HOST'),  # Hostname
-        'PORT': os.getenv('POSTGRES_PORT'),  # Port number
-        'OPTIONS': {
-            'sslmode': 'require',  # Ensure SSL connection is required
-        },
+        'NAME': os.getenv('RENDER_POSTGRES_DATABASE'),  # Name of your database
+        'USER': os.getenv('RENDER_POSTGRES_USER'),  # Username
+        'PASSWORD': os.getenv('RENDER_POSTGRES_PASSWORD'),  # Password
+        'HOST': os.getenv('RENDER_POSTGRES_HOST'),  # Hostname
+        'PORT': os.getenv('RENDER_POSTGRES_PORT'),  # Port number
+        # 'OPTIONS': {
+        #     'sslmode': 'require',  # Ensure SSL connection is required
+        # },
     }
 }
 
