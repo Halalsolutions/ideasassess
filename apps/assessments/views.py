@@ -299,6 +299,7 @@ class SubmitAssessmentView(APIView):
         student = Student.objects.get(user=user)
         student.results.add(result)
         student.completed_assessments.add(assessment)
+        assessment.results.add(result)
         # Return the calculated score and other relevant information
         return Response(
             {
