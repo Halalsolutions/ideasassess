@@ -145,7 +145,7 @@ class AddQuestionView(APIView):
                 all_questions = []
 
                 for q in questions:
-                    question_text = escape(q.get('question', ''))
+                    question_text = html.unescape(q.get('question', ''))
                     question_type = 'mcq'  # Hard-coded for now
 
                     # Create the Question object
@@ -159,12 +159,12 @@ class AddQuestionView(APIView):
                     )
 
                     incorrect_answers = q.get('incorrect_answers', [])
-                    correct_answer = escape(q.get('correct_answer', ''))
+                    correct_answer = html.unescape(q.get('correct_answer', ''))
 
                     for option in incorrect_answers:
                         Choice.objects.create(
                             question=question,
-                            choice_text=escape(option),
+                            choice_text=html.unescape(option),
                             is_correct=False
                         )
                     Choice.objects.create(
